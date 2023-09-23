@@ -1,0 +1,14 @@
+<?php
+
+// Establish a connection to the MySQL database using PDO
+$host = "localhost";
+$dbName = "myservice1";
+$dbUsername = "root";
+$dbPassword = "";
+
+try {
+    $pdo = new PDO("mysql:host=$host;dbname=$dbName", $dbUsername, $dbPassword);
+    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+} catch (PDOException $e) {
+    die("Connection failed: " . $e->getMessage());
+}

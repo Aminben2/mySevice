@@ -1,0 +1,142 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  background: url(../imgs/bg2.jpg);
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-size: 100% 100%;
+  font-family: sans-serif;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.big {
+  background-color: rgb(255, 255, 255);
+  width: 690px;
+  position: relative;
+  height: 400px;
+  display: flex;
+  box-shadow: 0 8px 24px rgba(33, 18, 170, 0.25);
+}
+
+.signup a {
+  color: #482b61;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.signup a:hover {
+  text-decoration: underline rgb(72, 43, 97);
+}
+
+.form-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-80%, -50%);
+  width: 400px;
+  border-radius: 0.75rem;
+  background-color: white;
+  padding: 2rem;
+}
+
+.title {
+  font-family: system-ui, sans-serif;
+  text-align: center;
+  font-size: 1.85rem;
+  line-height: 2rem;
+  font-weight: 700;
+  position: relative;
+  transform: translate(-12px, -12px);
+  color: #482b61;
+}
+
+.form {
+  margin-top: 1.5rem;
+}
+
+.input-group {
+  margin-top: 0.25rem;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
+.input-group label {
+  display: block;
+  color: rgb(72, 43, 97);
+  margin-bottom: 4px;
+}
+
+.sign {
+  display: block;
+  width: 35%;
+  background-color: rgb(72, 43, 97);
+  padding: 0.75rem;
+  text-align: center;
+  color: white;
+  border: none;
+  border-radius: 1.375rem;
+  font-weight: 600;
+}
+
+.line {
+  height: 1px;
+  flex: 1 1 0%;
+  background-color: rgba(55, 65, 81, 1);
+}
+
+.input {
+  width: 285px;
+  height: 45px;
+  padding: 10px;
+  border-radius: 12px;
+  border: 2px solid #fa8c5e;
+  outline: none;
+  transition: all 0.3s cubic-bezier(0.19, 1, 0.22, 1);
+  box-shadow: 0px 0px 20px -18px;
+}
+
+.input:hover {
+  border: 2px solid rgb(139, 27, 170);
+  box-shadow: 0px 0px 20px -17px;
+}
+
+.input:active {
+  transform: scale(0.95);
+}
+
+.input:focus {
+  border: 2px solid rgb(72, 43, 97);
+}
+
+.signup {
+  text-align: center;
+  /* font-size: 0.25rem; */
+  line-height: 1rem;
+  color: rgb(102, 107, 116);
+  position: relative;
+  transform: translate(-19px, -4px);
+}
+
+#logo-img {
+  height: 58px;
+  width: 196px;
+  z-index: 1;
+  position: absolute;
+  transform: translate(219%, 284px);
+}
+
+.error {
+  margin-bottom: 1rem;
+}
+
+.error span {
+  color: rgb(215, 4, 4);
+}

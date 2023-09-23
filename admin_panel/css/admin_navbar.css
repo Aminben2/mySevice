@@ -1,0 +1,203 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+body {
+  background-color: #fef7da;
+  font-family: Helvetica;
+  -webkit-font-smoothing: antialiased;
+}
+header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  box-shadow: 0 7px 15px 0 rgba(0, 0, 0, 0.13), 0 1px 4px 0 rgba(0, 0, 0, 0.11);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+  padding: 20px 35px;
+  background-color: #fde47b;
+}
+header img {
+  width: 60px;
+  height: 60px;
+}
+.controls {
+  display: flex;
+  justify-content: flex-end;
+  width: 70%;
+  align-items: center;
+  column-gap: 30px;
+}
+nav ul {
+  list-style: none;
+  display: flex;
+  column-gap: 20px;
+}
+li {
+  position: relative;
+  padding: 10px 5px;
+}
+ul li a {
+  color: #4fc3a1;
+  text-decoration: none;
+  font-weight: bold;
+  position: relative;
+  padding: 10px 0px;
+}
+
+ul li a:after {
+  background: none repeat scroll 0 0 transparent;
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 2px;
+  left: 50%;
+  position: absolute;
+  background: #4fc3a1;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
+}
+
+ul li a:hover:after {
+  width: 100%;
+  left: 0;
+}
+
+.logout {
+  padding: 5px;
+  border: none;
+  color: #fef7da;
+  font-weight: bold;
+  border-radius: 10px;
+}
+
+.active {
+  background-color: #ebd26f;
+  border-radius: 20px;
+}
+
+.Btn {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 45px;
+  height: 45px;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition-duration: 0.3s;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.199);
+  background-color: #4fc3a1;
+}
+
+/* plus sign */
+.sign {
+  width: 100%;
+  transition-duration: 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sign svg {
+  width: 17px;
+}
+
+.sign svg path {
+  fill: white;
+}
+/* text */
+.text {
+  position: absolute;
+  right: 0%;
+  width: 0%;
+  opacity: 0;
+  color: white;
+  font-size: 1.2em;
+  font-weight: 600;
+  transition-duration: 0.3s;
+}
+/* hover effect on button width */
+.Btn:hover {
+  width: 125px;
+  border-radius: 40px;
+  transition-duration: 0.3s;
+}
+
+.Btn:hover .sign {
+  width: 30%;
+  transition-duration: 0.3s;
+  padding-left: 20px;
+}
+/* hover effect button's text */
+.Btn:hover .text {
+  opacity: 1;
+  width: 70%;
+  transition-duration: 0.3s;
+  padding-right: 10px;
+}
+/* button click effect*/
+.Btn:active {
+  transform: translate(2px, 2px);
+}
+
+@media (max-width: 690px) {
+  .Btn {
+    width: 100%;
+    border-radius: 0px;
+  }
+  header {
+    padding: 5px;
+  }
+  ul{
+    display: flex;
+    flex-direction: column;
+    row-gap: 5px;
+  }
+  .controls {
+    flex-direction: column;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    row-gap: 0;
+    width: 100%;
+    row-gap: 20px;
+  }
+  ul li {
+    padding: 0;
+  }
+  ul li a:hover:after {
+    width: 0;
+    left: 0;
+  }
+  nav {
+    width: 100%;
+  }
+  ul li {
+    margin: auto;
+  }
+  li a {
+    text-align: center;
+  }
+  header {
+    height: fit-content;
+  }
+  nav ul {
+    flex-direction: column;
+    row-gap: 10px;
+  }
+  header img {
+    display: none;
+  }
+  .logout {
+    width: 100%;
+  }
+}
